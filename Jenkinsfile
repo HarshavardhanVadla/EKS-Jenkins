@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        KUBECONFIG = '~/.kube/config' // Ensure this path is correct
+        KUBECONFIG = '/root/.kube/config' // Ensure this path is correct
     }
 
     stages {
