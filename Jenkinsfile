@@ -16,8 +16,8 @@ pipeline {
             steps {
                 script {
                     // Apply Kubernetes deployment and service files
-                    sh 'kubectl apply -f httpd-deployment.yaml'
-                    sh 'kubectl apply -f httpd-service.yaml'
+                    sh 'kubectl apply -f httpd-deployment.yaml --validate=false'
+                    sh 'kubectl apply -f httpd-service.yaml --validate=false'
                 }
             }
         }
