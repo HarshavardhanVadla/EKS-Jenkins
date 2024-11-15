@@ -2,14 +2,12 @@ pipeline {
     agent any
 
     environment {
-        // Path to kubectl configuration file
-        KUBECONFIG = '~/.kube/config' 
+        KUBECONFIG = '/path/to/your/kubeconfig' // Ensure this path is correct
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                // Pull the latest files from GitHub
                 git branch: 'main', url: 'https://github.com/HarshavardhanVadla/EKS-Jenkins.git'
             }
         }
